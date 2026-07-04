@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Contato LunetaDev — solicite propostas e fale com nossa equipe técnica.">
+  <title>Contato — LunetaDev</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="logo.png">
+  <meta property="og:image" content="logo.png">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav-brand" href="index.html"><img src="logo.png" alt="LunetaDev" class="logo"></a>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Sobre</a></li>
+        <li><a href="services.html">Serviços</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <section class="hero-content">
+      <h1>Fale Conosco</h1>
+      <p class="lead">Preencha o formulário e responderemos em até 2 dias úteis.</p>
+      <form class="contact-form" method="POST" action="https://formspree.io/f/your-form-id">
+        <p><label>Nome<br><input type="text" name="name" required></label></p>
+        <p><label>E-mail<br><input type="email" name="email" required></label></p>
+        <p><label>Mensagem<br><textarea name="message" rows="6" required></textarea></label></p>
+        <p><button class="btn primary" type="submit">Enviar</button></p>
+      </form>
+    </section>
+    <aside class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#7b61ff">
+          <circle cx="30" cy="30" r="8"/>
+          <circle cx="90" cy="30" r="6"/>
+          <circle cx="60" cy="80" r="10"/>
+        </g>
+      </svg>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> LunetaDev</p>
+  </footer>
+</body>
+</html>
