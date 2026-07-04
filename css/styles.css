@@ -1,0 +1,54 @@
+:root{
+  --bg-1: #0a0f2c;
+  --bg-2: #1e2b4f;
+  --card: #0f1830;
+  --accent: #5ae6ff;
+  --muted: rgba(255,255,255,0.7);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg,var(--bg-1),var(--bg-2));
+  color:#fff;
+  -webkit-font-smoothing:antialiased;
+}
+/* Focus styles for accessibility */
+a:focus,button:focus,input:focus,textarea:focus{outline:3px solid rgba(90,230,255,0.18);outline-offset:3px}
+a:focus{outline-color:var(--accent)}
+.site-header{padding:20px 32px}
+.nav{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto}
+.nav-brand .logo{height:44px}
+.nav-list{list-style:none;margin:0;padding:0;display:flex;gap:18px}
+.nav-list a{color:var(--muted);text-decoration:none}
+.nav-list a:hover{color:var(--accent)}
+
+.hero{display:flex;gap:40px;align-items:center;justify-content:space-between;max-width:1100px;margin:40px auto;padding:20px}
+.hero-content{flex:1;min-width:260px}
+.hero-visual{width:280px;height:280px}
+.hero h1{font-size:2.4rem;color:var(--accent);margin:0 0 12px}
+.lead{color:var(--muted);font-size:1.05rem;margin-bottom:20px}
+.actions{margin-top:8px}
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600}
+.btn.primary{background:var(--accent);color:#000;margin-right:10px}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+.site-footer{max-width:1100px;margin:60px auto;padding:20px;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+.site-footer a{color:var(--muted);text-decoration:none;margin-left:10px}
+
+/* SVG styles */
+.orb-sprite{width:100%;height:100%}
+.core{filter:drop-shadow(0 8px 20px rgba(0,0,0,0.6));}
+
+/* Responsive */
+@media (max-width:800px){
+  .hero{flex-direction:column;align-items:center;text-align:center}
+  .hero-visual{width:220px;height:220px}
+  .nav-list{display:none}
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce){
+  .orb-sprite *{animation:none}
+  .sat{animation:none}
+}

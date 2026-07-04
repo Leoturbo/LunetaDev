@@ -3,65 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LunetaDev | Cartão de Visita Digital</title>
+  <meta name="description" content="LunetaDev — soluções de software e experiência digital para empresas de tecnologia." />
+  <meta property="og:title" content="LunetaDev — Soluções em Tecnologia" />
+  <meta property="og:description" content="LunetaDev — soluções de software e experiência digital para empresas de tecnologia." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo.png" />
+  <link rel="icon" href="logo.png">
+  <meta name="theme-color" content="#0a0f2c">
+  <title>LunetaDev | Soluções em Tecnologia</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #0a0f2c, #1e2b4f);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-    .card {
-      background-color: #101830;
-      border: 1px solid #2d3c61;
-      border-radius: 20px;
-      padding: 30px;
-      max-width: 400px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-      text-align: center;
-    }
-    .logo {
-      width: 80px;
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-size: 2em;
-      margin-bottom: 10px;
-      color: #5ae6ff;
-    }
-    p {
-      font-size: 1em;
-      margin-bottom: 20px;
-    }
-    .contact-btn {
-      display: block;
-      margin: 10px auto;
-      padding: 12px 25px;
-      background: #5ae6ff;
-      color: #000;
-      text-decoration: none;
-      border-radius: 10px;
-      transition: 0.3s ease;
-    }
-    .contact-btn:hover {
-      background: #2ed0e3;
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-  <div class="card">
-    <img src="logo.png" class="logo" alt="Logo LunetaDev">
-    <h1>LunetaDev</h1>
-    <p>Explorando ideias. Construindo experiências.</p>
-    <a href="mailto:contato@lunetadev.com" class="contact-btn">📧 contato@lunetadev.com</a>
-    <a href="https://wa.me/5599999999999" class="contact-btn">💬 Fale no WhatsApp</a>
-    <a href="https://www.instagram.com/lunetadev" class="contact-btn">📷 Instagram</a>
-    <a href="privacidade.html" class="contact-btn">🔒 Política de Privacidade</a>
-  </div>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav-brand" href="index.html"><img src="logo.png" alt="LunetaDev" class="logo"></a>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Sobre</a></li>
+        <li><a href="services.html">Serviços</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="privacidade.html">Privacidade</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <section class="hero-content">
+      <h1>LunetaDev</h1>
+      <p class="lead">Transformamos ideias em produtos digitais de alto impacto — software, UX e consultoria técnica.</p>
+      <p class="actions">
+        <a class="btn primary" href="contato.html">Solicitar proposta</a>
+        <a class="btn ghost" href="services.html">Ver serviços</a>
+      </p>
+    </section>
+
+    <aside class="hero-visual" aria-hidden="true">
+      <!-- SVG animado simples representando órbita/tecnologia -->
+      <svg viewBox="0 0 200 200" class="orb-sprite" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="1">
+            <stop offset="0%" stop-color="#5ae6ff" />
+            <stop offset="100%" stop-color="#7b61ff" />
+          </linearGradient>
+        </defs>
+        <circle cx="100" cy="100" r="40" fill="url(#g1)" class="core" />
+        <g class="orbits" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1">
+          <ellipse cx="100" cy="100" rx="70" ry="40"/>
+          <ellipse cx="100" cy="100" rx="50" ry="30"/>
+        </g>
+        <circle r="4" fill="#fff" class="sat sat1">
+          <animateMotion dur="6s" repeatCount="indefinite" path="M30 100 A70 40 0 1 0 170 100 A70 40 0 1 0 30 100" />
+        </circle>
+        <circle r="3" fill="#ffd36e" class="sat sat2">
+          <animateMotion dur="4s" repeatCount="indefinite" path="M50 100 A50 30 0 1 0 150 100 A50 30 0 1 0 50 100" />
+        </circle>
+      </svg>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> LunetaDev — made with care</p>
+    <p class="socials">
+      <a href="mailto:contato@lunetadev.com">contato@lunetadev.com</a>
+      <a href="https://wa.me/5599999999999" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a href="https://www.instagram.com/lunetadev" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </p>
+  </footer>
 </body>
 </html>
