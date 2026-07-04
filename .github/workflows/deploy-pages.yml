@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - site/refactor
+      - main
 
 jobs:
   deploy:
